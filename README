@@ -1,3 +1,9 @@
+CURLOPT_COOKIEFILE
+http://curl.haxx.se/mail/lib-2003-09/0024.html
+
+curl login youtube
+http://forums.phpfreaks.com/index.php?topic=268322.0
+
 curl htmltitle.cc
 http://www.opensource.apple.com/source/curl/curl-42/curl/docs/examples/htmltitle.cc
 
