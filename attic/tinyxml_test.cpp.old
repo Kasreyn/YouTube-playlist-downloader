@@ -1,0 +1,39 @@
+#include <iostream>
+#include <tinyxml2.h>
+//#include <tinyxml2>
+//#include "/usr/include/tinyxml2.h"
+
+//  g++ -ltinyxml2 -o tinyxml_test tinyxml_test.cpp
+
+int main() {
+	tinyxml2::XMLDocument doc;
+	doc.LoadFile("tinyxml_testpage.xml");
+	
+	tinyxml2::XMLNode* n1 = doc.FirstChildElement("html")->FirstChildElement("head")->FirstChildElement("title");
+	tinyxml2::XMLNode* n2 = doc.FirstChildElement("html")->FirstChildElement("body")->FirstChildElement("div")->FirstChildElement("div");
+	tinyxml2::XMLNode* n3;
+	tinyxml2::XMLNode* n4;
+
+	//std::cout << n1->ToElement()->GetText() << std::endl;
+
+	while ((n2 = n2->NextSibling()) != NULL) {
+		//std::cout << n2->ToElement()->Attribute("id") << std::endl;
+		if (std::string(n2->ToElement()->Attribute("id")) == "content-container") {
+			//std::cout << "content-container found" << std::endl;
+			n3 = n2->FirstChildElement("div")->FirstChildElement("div")->NextSibling()->FirstChildElement("div")->NextSibling()->FirstChildElement("div")->NextSibling()->NextSibling()->FirstChildElement("ol")->FirstChildElement("li");
+
+			while ((n3 = n3->NextSibling()) != NULL) {
+//				std::cout << n3->FirstChildElement("div")->FirstChildElement("div")->NextSibling()->NextSibling()->FirstChildElement("div")->FirstChildElement("span")->FirstChildElement("a")->ToElement()->GetText();
+/*				n4 = n3->FirstChildElement("div");
+				std::cout << "test";
+				std::cout << n4->ToElement()->Attribute("id") << std::endl;
+				std::cout << "test";*/
+
+				std::cout << n3->ToElement()->Attribute("id") << std::endl;
+				
+			}
+		}
+	}
+
+}
+
