@@ -1,3 +1,6 @@
+curl cookie file
+http://stackoverflow.com/questions/6383933/curl-get-cookies-into-file
+
 CURLOPT_COOKIEFILE
 http://curl.haxx.se/mail/lib-2003-09/0024.html
 
