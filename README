@@ -1,0 +1,38 @@
+curl htmltitle.cc
+http://www.opensource.apple.com/source/curl/curl-42/curl/docs/examples/htmltitle.cc
+
+libcurl example
+http://curl.haxx.se/libcurl/c/simple.html
+
+http://stackoverflow.com/questions/138555/how-to-convert-html-to-xhtml
+
+libtidy C++
+http://www.quietearth.us/articles/2007/02/13/libtidy-example-html-parse-code
+
+http://pugixml.googlecode.com/svn/tags/latest/docs/quickstart.html
+
+http://www.grinninglizard.com/tinyxml2/index.html
+
+OAuth 2.0 jQuery example
+http://www.jensbits.com/2011/12/20/authenticating-with-oauth-2-0-for-google-api-access-with-php/
+
+https://developers.google.com/accounts/docs/OAuth2Login
+
+google gdata api youtube get deleted
+https://groups.google.com/forum/?fromgroups#!topic/youtube-api-gdata/n0jUYMIjtzA
+
+deleted youtube videos archive meta information
+"
+On Sunday, October 16, 2011 10:09:22 PM UTC+2, RoRo1990 wrote:
+"Hello so I favourite lots of videos on youtube to watch them later but it seems youtube has decided to delete videos because of copyright infringements. This isn't the problem the problem is I favourite videos because I want to watch them later. Now I don't even know what the video I Favorited was about/called because when a video is deleted it is renamed to DELETED VIDEO. Is there anyway I can find out what the name of the video was before deleted videos had the title of them but it seems they changed them all to deleted video....."
+Yes there is. This may not be GData API but it gets the job done via libcurl (use Firefox plugin to export cookies to file), libtidy and libxml2:
+
+https://github.com/Kasreyn/YouTube-playlist-downloader
+
+This requires cookies and so only works on your own profile but it does include references to "unlinked" videos. In some cases they only have the id/watch reference (deleted by user) while others have a title (unlinked by higher power).
+
+The ones with truncated title (if you click the link) are actually readable from HTML source.
+
+I understand the reasons behind videos getting deleted, but why is the title purged along with it? Actually, it does make sense, that a video deleted by user is purged entirely. Instead of employing a workforce whose job it is to sort through and decide if something might be offensive, hurtful or not.
+"
+http://productforums.google.com/forum/#!msg/youtube/yGY63oEFoNw/ExIlFHIziyYJ
